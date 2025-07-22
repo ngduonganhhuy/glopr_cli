@@ -17,8 +17,8 @@ A command-line tool to scaffold Flutter apps using a custom template.
 Clone this repo and activate locally:
 
 ```bash
-git clone https://github.com/your-org/holmes_cli.git
-cd holmes_cli
+git clone https://github.com/your-org/glopr_cli.git
+cd glopr_cli
 dart pub global activate --source path .
 ```
 
@@ -31,12 +31,12 @@ dart pub global activate --source path .
 Create a new Flutter project from your local template:
 
 ```bash
-holmes create <project-name> [-o com.example.app]
+glopr create <project-name> [-o com.example.app]
 ```
 
 #### Example:
 ```bash
-holmes create my_app -o com.mycompany.myapp
+glopr create my_app -o com.mycompany.myapp
 ```
 
 You will be prompted to enter:
@@ -70,7 +70,7 @@ Then the CLI will:
 Check your environment for Flutter and Dart:
 
 ```bash
-holmes doctor
+glopr doctor
 ```
 
 #### Output:
@@ -90,12 +90,12 @@ Dart SDK version: 3.8.1 (stable)
 Check the current CLI version:
 
 ```bash
-holmes --version
+glopr --version
 ```
 
 #### Output:
 ```bash
-holmes_cli version 1.0.0
+glopr_cli version 1.0.0
 ```
 
 ---
@@ -105,7 +105,7 @@ holmes_cli version 1.0.0
 Display available commands and options:
 
 ```bash
-holmes --help
+glopr --help
 ```
 
 #### Output:
@@ -114,10 +114,10 @@ Holmes CLI
 Create a Flutter project from your custom template
 
 Usage:
-  holmes create <project_name> [-o com.example.app]
-  holmes -v | --version
-  holmes -h | --help
-  holmes doctor
+  glopr create <project_name> [-o com.example.app]
+  glopr -v | --version
+  glopr -h | --help
+  glopr doctor
 
 Options:
   -o, --org       Set the bundleId (e.g., com.example.app)

@@ -5,7 +5,7 @@ import 'package:yaml/yaml.dart';
 
 Future<void> showVersion() async {
   final version = await getVersion();
-  print('${AnsiStyles.blue('holmes_cli')} version ${AnsiStyles.bold(version)}');
+  print('${AnsiStyles.blue('glopr_cli')} version ${AnsiStyles.bold(version)}');
 }
 
 void showHelp() {
@@ -14,10 +14,10 @@ ${AnsiStyles.green('Holmes CLI')}
 Create a Flutter project from your custom template
 
 Usage:
-  holmes create <project_name> [-o com.example.org]
-  holmes -v | --version
-  holmes -h | --help
-  holmes doctor
+  glopr create <project_name> [-o com.example.org]
+  glopr -v | --version
+  glopr -h | --help
+  glopr doctor
 
 Options:
   -o, --org       Set the bundleId (eg: com.example.app)

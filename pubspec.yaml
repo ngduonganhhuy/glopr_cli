@@ -1,8 +1,8 @@
-name: holmes_cli
-description: A CLI to generate Flutter starter project from template. Built by Holmes <3
-version: 1.0.0
-homepage: https://github.com/ngduonganhhuy/holmes_cli.git
-repository: https://github.com/ngduonganhhuy/holmes_cli.git
+name: glopr_cli
+description: A CLI to generate Flutter starter project from template. Built by Glopr Team <3
+version: 1.0.1
+homepage: https://github.com/ngduonganhhuy/glopr_cli.git
+repository: https://github.com/ngduonganhhuy/glopr_cli.git
 
 environment:
   sdk: ^3.5.4
@@ -20,4 +20,4 @@ dev_dependencies:
   test: ^1.26.3
 
 executables:
-  holmes: holmes_cli
+  glopr: glopr_cli

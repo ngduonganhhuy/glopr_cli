@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:args/args.dart';
-import 'package:holmes_cli/holmes_cli.dart';
+import 'package:glopr_cli/glopr_cli.dart';
 import 'package:path/path.dart' as p;
 
 void main(List<String> args) async {
@@ -32,14 +32,14 @@ void main(List<String> args) async {
   if (parsed.command?.name == 'create') {
     final command = parsed.command!;
     if (command.arguments.isEmpty) {
-      print('❗ Missing project path. Use: holmes create <project-path>');
+      print('❗ Missing project path. Use: glopr create <project-path>');
       exit(1);
     }
     final rawPath = command.arguments[0];
     final absolutePath = Directory(rawPath).absolute.path;
     final target = Directory(absolutePath);
     final projectName = p.basename(absolutePath);
-    final bundleId = parsed['org'] ?? 'com.holmes.starter';
+    final bundleId = parsed['org'] ?? 'com.glopr.starter';
 
     stdout.write('📝 App display name: ');
     final appName = stdin.readLineSync() ?? projectName;
