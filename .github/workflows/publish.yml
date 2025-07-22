@@ -1,0 +1,39 @@
+
+---
+
+## ✅ 2. CI/CD: Auto-publish lên `pub.dev` khi tag
+
+---
+
+### 📁 `/.github/workflows/publish.yml`
+
+```yaml
+name: Publish to pub.dev
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # example: v1.0.0
+
+jobs:
+  publish:
+    name: Publish package
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Dart
+        uses: dart-lang/setup-dart@v1
+
+      - name: Install dependencies
+        run: dart pub get
+
+      - name: Run tests
+        run: dart test
+
+      - name: Publish to pub.dev
+        run: dart pub publish --force
+        env:
+          PUB_CREDENTIALS: ${{ secrets.PUB_CREDENTIALS }}
