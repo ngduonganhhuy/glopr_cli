@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:args/args.dart';
-import 'package:holmes_cli/commands.dart';
+import 'package:holmes_cli/holmes_cli.dart';
 import 'package:path/path.dart' as p;
 
 void main(List<String> args) async {
